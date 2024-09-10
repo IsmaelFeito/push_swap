@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 14:09:00 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/07 18:01:26 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/10 09:33:52 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	look_to_duplicate_nmb(t_list *stack)
 	}
 }
 
-void add_node_to_stack(t_list **stack, char **numbers, int *indx)
+void	add_node_to_stack(t_list **stack, char **numbers, int *indx)
 {
 	int j;
 	long num;
@@ -61,7 +61,7 @@ void add_node_to_stack(t_list **stack, char **numbers, int *indx)
 	}
 }
 
-void create_stack(char *argv[], t_list **stack_a)
+void	create_stack(char *argv[], t_list **stack_a)
 {
 	int i;
 	int indx;

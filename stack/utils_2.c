@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 18:06:33 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/07 18:11:53 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/10 09:36:05 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	free_list(t_list **list)
 {
-	t_list	*tmp;
+	t_list *tmp;
 
 	while (*list)
 	{
