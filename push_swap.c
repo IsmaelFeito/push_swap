@@ -6,9 +6,13 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 11:14:26 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/07 13:14:29 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/10 19:46:50 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+void    push_swap(t_list **stack_a, t_list **stack_b, char  **argv)
+{
+    create_stack(argv, stack_a);
+    
+}
