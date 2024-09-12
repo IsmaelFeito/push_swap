@@ -6,42 +6,44 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 11:54:27 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/12 12:45:06 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/12 16:45:28 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		*total_nodes(t_list *list)
+t_list	*min_nbr(t_list *stack)
 {
-	int		total;
-	
-	if (list == NULL)
-		return (NULL);
-	while (list->next)
+	t_list	*min_val = stack;
+	while(stack != NULL)
 	{
-		list = list->next;
-		i++;
-	}	
-	return (list);
-}
-
-void	index_list(t_list	**stack_a)
-{
-	int	i;
-	t_list	*cpy;
-
-	i = total_nodes(*stack_a);
-	cpy = *stack_a;
-	while(*stack_a->num && stack_a->next->num)
-	{
-		while(cpy->num > stack_a->next->num)
-			*stack_a = *stack_a->next;
-		if(cpy->num < *stack_a->num)
-			cpy = *stack_a;
-
+		if(min_val->num > stack->num)
+			min_val = stack;
+		stack = stack->next;
 	}
-	cpy->id = i--;
+	return(min_val);
 }
-2 1 5 3 4 6
-          cs
+
+
+t_list	**index_list_v2(t_list **stack)
+{
+	t_list	*actual_id = min_nbr(*stack);
+	t_list *cpy;
+	int	id = 1;
+	while(*stack != NULL)
+	{
+		actual_id->id = id++;
+		if(*stack == actual_id)
+			*stack = (*stack)->next;
+		else
+		{
+			cpy = *stack;
+			while(cpy != NULL && cpy->next != actual_id)
+				cpy = cpy->next;
+			if (cpy != NULL)
+				cpy->next;
+		}
+	}
+	*stack = cpy;
+	return(stack);
+}
