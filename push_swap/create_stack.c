@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 14:09:00 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/07 18:01:26 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/13 16:06:58 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ void add_node_to_stack(t_list **stack, char **numbers, int *indx)
 			node = new_node((*indx)++, num);
 			add_node_back(stack, node);
 		}
+		
 	}
 }
 
@@ -66,6 +67,7 @@ void create_stack(char *argv[], t_list **stack_a)
 	int i;
 	int indx;
 	char **content;
+	char **content_cpy;
 	i = 0;
 	indx = 1;
 
@@ -74,8 +76,10 @@ void create_stack(char *argv[], t_list **stack_a)
 		if (argv[i][0] != '\0')
 		{
 			content = ft_split(argv[i], ' ');
+			content_cpy = ordered_array(content);
 			add_node_to_stack(stack_a, content, &indx);
 			look_to_duplicate_nmb(*stack_a);
+			
 			full_free(content);
 		}
 		else
