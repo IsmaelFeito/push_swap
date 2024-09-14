@@ -6,7 +6,11 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 14:39:31 by ifeito-m          #+#    #+#             */
+<<<<<<< HEAD
+/*   Updated: 2024/09/14 11:51:52 by ifeito-m         ###   ########.fr       */
+=======
 /*   Updated: 2024/09/12 14:45:55 by ifeito-m         ###   ########.fr       */
+>>>>>>> 6a06b4694abf22665f76d109b655d4682ecd694e
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +40,13 @@ void	add_node_back(t_list **stack, t_list *new)
 		*stack = new;
 }
 
-t_list	*new_node(int id, long num)
+t_list	*new_node(long num)
 {
 	t_list *node;
 
 	node = ft_calloc(1, sizeof(t_list));
 	if (!node)
 		return (NULL);
-	node->id = id;
 	node->num = num;
 	node->prev = NULL;
 	node->next = NULL;
@@ -57,7 +60,7 @@ long	ft_atoi_v2(const char *str)
 	long sign;
 
 	i = 0;
-	while ((str[i] < 14 && str[i] >= 9) || str[i] == ' ')
+	while ((str[i] < 14 && str[i] > 8) || str[i] == ' ')
 		i++;
 	sign = 1;
 	while (str[i] == '-' || str[i] == '+')

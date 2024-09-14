@@ -6,7 +6,11 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 16:05:02 by ifeito-m          #+#    #+#             */
+<<<<<<< HEAD
+/*   Updated: 2024/09/14 13:19:08 by ifeito-m         ###   ########.fr       */
+=======
 /*   Updated: 2024/09/13 17:07:22 by ifeito-m         ###   ########.fr       */
+>>>>>>> 6a06b4694abf22665f76d109b655d4682ecd694e
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +39,21 @@ typedef struct t_list
 void	create_stack(char	*agrv[], t_list **stack_a);
 void    add_node_to_stack(t_list, char **numbers, int *indx);
 long	ft_atoi_v2(const char *str);
-t_list  *new_node(int   id, long num);
+t_list  *new_node(long num);
 void    add_node_back(t_list **stack, t_list *new);
 t_list	*find_last_node(t_list *list);
 void    free_str(char  **content);
 void	look_to_duplicate_nmb(t_list *stack);
 void	free_list(t_list **list);
 
+<<<<<<< HEAD
+//provisional
+char	*ft_memcmp_v2(const void *s1, const void *s2, size_t n);
+char **index_str(char **content);
+t_list	**index_list(t_list **stack_a, char **nums);
+=======
 int		pointer_size(char **nums);
+>>>>>>> 6a06b4694abf22665f76d109b655d4682ecd694e
 
 //movements
 void	pa(t_list **stack_b, t_list **stack_a);
