@@ -46,14 +46,11 @@ void    free_str(char  **content);
 void	look_to_duplicate_nmb(t_list *stack);
 void	free_list(t_list **list);
 
-<<<<<<< HEAD
 //provisional
 char	*ft_memcmp_v2(const void *s1, const void *s2, size_t n);
 char **index_str(char **content);
 t_list	**index_list(t_list **stack_a, char **nums);
-=======
 int		pointer_size(char **nums);
->>>>>>> 6a06b4694abf22665f76d109b655d4682ecd694e
 
 //movements
 void	pa(t_list **stack_b, t_list **stack_a);
