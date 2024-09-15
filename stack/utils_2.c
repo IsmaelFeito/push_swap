@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 18:06:33 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/15 11:47:20 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/15 12:41:04 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,20 +83,22 @@ char	**ordered_array(char	**content)
 	while(content[i])
 		order[i] = content[i++];
 	i = 0;
-	while(i < (pointer_size(order) - 1))//i < tamano ptr - '\0'
+	while(i < (pointer_size(order) - 1))//i < tamaño ptr - '\0'
 	{
 		j = i + 1;
 		while(j < pointer_size(order))
 		{
 			if(ft_memcmp(content[i++], order[j], 1) < 0)
+			{
 				ft_memcpy(order[j], content[i], sizeof(char *));
 				if(i == pointer_size(order) - 1)
 				{
 					i = 0;
 					j++;
-					if((ft_memcmp(content[i++], order[j], 1) < 0 && j < pointer_size(order)))
-						
+					if((ft_memcmp(content[i++], order[j], 1) < 0) && (j < pointer_size(order)) && (order[j - 1] != order[j]))
+						ft_memcpy(order[j], content[i], sizeof(char *));
 				}
+			}
 		}
 		j++;
 		i++;

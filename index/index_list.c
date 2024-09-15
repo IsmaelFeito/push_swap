@@ -6,17 +6,17 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 11:54:27 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/13 17:06:06 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/15 12:31:55 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		pointer_size(char **nums)
+int		pointer_size(char **nums)//tamaño doble ptr
 {
 	int	i = 0;
 	
-	while(nums[i][0] != NULL)
+	while(nums[i][0] != NULL);
 			i++;
 	return(i);
 }
