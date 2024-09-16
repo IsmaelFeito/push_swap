@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 18:06:33 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/15 12:41:04 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/15 21:19:09 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,9 +74,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 char	**ordered_array(char	**content)
 {
 	char	**order;
-	int		i = 0;
-	int		j = 0;
+	int		i;
+	int		j;
 	
+	i = 0;
 	order = malloc(pointer_size(content) * sizeof(char *));
 	if(!order)
 		return (NULL);
@@ -85,22 +86,13 @@ char	**ordered_array(char	**content)
 	i = 0;
 	while(i < (pointer_size(order) - 1))//i < tamaño ptr - '\0'
 	{
-		j = i + 1;
-		while(j < pointer_size(order))
+		j = 0;
+		while(j < pointer_size(order) - 1)//j < tamaño pr\tr - '\0'
 		{
-			if(ft_memcmp(content[i++], order[j], 1) < 0)
-			{
-				ft_memcpy(order[j], content[i], sizeof(char *));
-				if(i == pointer_size(order) - 1)
-				{
-					i = 0;
-					j++;
-					if((ft_memcmp(content[i++], order[j], 1) < 0) && (j < pointer_size(order)) && (order[j - 1] != order[j]))
-						ft_memcpy(order[j], content[i], sizeof(char *));
-				}
-			}
+			if(ft_atoi_v2(order[j]) > ft_atoi_v2(order[j + 1]))
+				ft_swap(&order[j], &order[j + 1]);
+			j++;
 		}
-		j++;
 		i++;
 	}
 	return(order);

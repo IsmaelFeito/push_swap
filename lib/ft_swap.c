@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   index.c                                            :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/14 11:53:45 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/15 21:04:26 by ifeito-m         ###   ########.fr       */
+/*   Created: 2024/09/15 21:14:01 by ifeito-m          #+#    #+#             */
+/*   Updated: 2024/09/15 21:15:56 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-t_list	**index_list(t_list **stack_a, char **nums)
+void    ft_swap(char **a, char **b)
 {
-	int j = 0;
-	
-	while(nums[j])
-	{
-		if((*stack_a)->num == nums[j])
-			(*stack_a)->id = j++;
-		else
-			(*stack_a)->next;
-	}
-	return(stack_a);
-}
+    char    *temp;
 
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
