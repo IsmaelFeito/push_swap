@@ -51,6 +51,8 @@ char	*ft_memcmp_v2(const void *s1, const void *s2, size_t n);
 char **index_str(char **content);
 t_list	**index_list(t_list **stack_a, char **nums);
 int		pointer_size(char **nums);
+char	**order_ptr_2(char	**nums, char **temp);
+char	**order_ptr(char	**nums);
 
 //movements
 void	pa(t_list **stack_b, t_list **stack_a);

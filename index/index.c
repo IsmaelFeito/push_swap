@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 11:53:45 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/15 21:04:26 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/16 15:35:47 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,3 @@ t_list	**index_list(t_list **stack_a, char **nums)
 	}
 	return(stack_a);
 }
-
