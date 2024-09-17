@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 11:54:27 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/17 02:24:03 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/17 17:54:05 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,24 +47,19 @@ t_list	**index_list(t_list **stack_a)
 	t_list	*temp;
 	int		id;
 	
-
-	temp = *stack_a;
-	temp_mn = min_nbr(stack_a);
-	temp_mn->id = 1;
-	temp_mx = max_num(stack_a);
-	temp_mx->id = ft_lstsize(*stack_a);
-	id = 2;
+	temp = max_num(stack_a);
+	temp->id = ft_lstsize(*stack_a);
+	id = (ft_lstsize(*stack_a) - 1);
 	while(temp)
-	{
-		if(temp != temp_mn && temp != temp_mx)
-			
+	{	
+		temp = temp->prev;
+		while(*stack_a)
+		{
+			if((*stack_a)->num < temp->num)
+				temp = (*stack_a);
+			(*stack_a) = (*stack_a)->next;
+		}
+		temp->id = id--;
 	}
-	
+	return(temp);
 }
-
-
-
-
-
-
-
