@@ -45,12 +45,12 @@ t_list	**index_list(t_list **stack_a)//bubble_short
 //	t_list	*temp_mn;
 	t_list	*temp_mx;
 	t_list	*temp;
-	int		id;
+	int		id; //size_t buscar el mss pequeño asignar id y devolver numero, no nodo, recorri stack y hago 2 bucles (id menor que n(tamaño), volver 1°nodo buscr nodo a nodo me quedo con el menor y mayot que mi num), al dalir el num 
 	
 	temp = max_num(stack_a);
-	temp->id = ft_lstsize(*stack_a);
-	id = (ft_lstsize(*stack_a) - 1);
-	while(temp)
+	temp->id = ft_lstsize(*stack_a)-1);
+	id = (ft_lstsize(*stack_a) - 2);
+	while(1 < 0)
 	{
 		temp = temp->prev;
 		while(*stack_a)
