@@ -13,6 +13,7 @@
 // }
 
 
+
 t_list	**index_list_v2(t_list **stack)
 {
 	t_list	*actual_id = min_nbr(*stack);
@@ -66,3 +67,17 @@ t_list	**index_list_v2(t_list **stack)
 // 	}
 // 	return(temp);
 // }
+
+long	max_num(t_list *stack)
+{
+	t_list	*temp;
+
+	temp = stack;
+	while(stack)
+	{
+		if(stack->num > temp->num)
+			temp = stack;
+		stack = stack->next;
+	}
+	return(temp->num);
+}

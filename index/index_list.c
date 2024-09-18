@@ -6,60 +6,43 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 11:54:27 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/18 12:41:38 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/18 16:48:13 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// t_list	*min_nbr(t_list *stack)
-// {
-// 	t_list	*temp;
-
-// 	temp = stack;
-// 	while(stack)
-// 	{
-// 		if(stack->num < temp->num)
-// 			temp = stack;
-// 		stack = stack->next;
-// 	}
-// 	return(temp);
-//}
-
-t_list	*max_num(t_list *stack)
+t_list	**index_list(t_list **stack_a)
 {
+	long	min_value;
+	long	prev_min;
 	t_list	*temp;
-
-	temp = stack;
-	while(stack)
-	{
-		if(stack->num > temp->num)
-			temp = stack;
-		stack = stack->next;
-	}
-	return(temp);
-}
-
-t_list	**index_list(t_list **stack_a)//bubble_short
-{
-//	t_list	*temp_mn;
-	t_list	*temp_mx;
-	t_list	*temp;
-	int		id; //size_t buscar el mss pequeño asignar id y devolver numero, no nodo, recorri stack y hago 2 bucles (id menor que n(tamaño), volver 1°nodo buscr nodo a nodo me quedo con el menor y mayot que mi num), al dalir el num 
+	t_list	*current;
+	size_t		id;
 	
-	temp = max_num(stack_a);
-	temp->id = ft_lstsize(*stack_a)-1);
-	id = (ft_lstsize(*stack_a) - 2);
-	while(1 < 0)
+	id = 0;
+	prev_min = (INT_MIN - 1);
+	while(id < (ft_lstsize_v2(*stack_a)))
 	{
-		temp = temp->prev;
-		while(*stack_a)
+		current = *stack_a;
+		temp = NULL;
+		min_value = min_nbr(*stack_a);
+		while(current)
 		{
-			if(((*stack_a)->num < temp->num) && (temp->prev->num > (*stack_a)->num))
-				temp = (*stack_a);
-			(*stack_a) = (*stack_a)->next;
+			if((current->num > prev_min) && (current->num) == min_value)
+			{
+				min_value = current->num;
+				temp = current;
+			}
+			current = current->next;
 		}
-		temp->id = id--;
+		if(temp)
+		{
+			temp->id = id++;
+			prev_min = temp->num;
+		}
+		else
+			break;
 	}
-	return(temp);
+	return(stack_a);
 }

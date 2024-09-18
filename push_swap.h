@@ -26,7 +26,7 @@
 
 typedef struct t_list
 {
-	int					id;
+	size_t					id;
 	long				num;
 	int					cost;
 	
@@ -50,6 +50,7 @@ void	free_list(t_list **list);
 char	*ft_memcmp_v2(const void *s1, const void *s2, size_t n);
 char **index_str(char **content);
 t_list	**index_list(t_list **stack_a, char **nums);
+size_t	ft_lstsize_v2(t_list *lst);
 int		pointer_size(char **nums);
 char	**order_ptr_2(char	**nums, char **temp);
 char	**order_ptr(char	**nums);

@@ -36,7 +36,7 @@ void	look_to_duplicate_nmb(t_list *stack)
 	}
 }
 
-void	add_node_to_stack(t_list **stack, char **content, int *indx)
+void	add_node_to_stack(t_list **stack, char **content, size_t *indx)
 {
 	int j;
 	long num;
@@ -68,7 +68,7 @@ void	add_node_to_stack(t_list **stack, char **content, int *indx)
 void	create_stack(char **argv, t_list **stack_a)
 {
 	int		i;
-	int		indx;
+	size_t		indx;
 	char	**content;
 	i = 0;
 	indx = 1;
