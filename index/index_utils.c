@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 11:53:45 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/18 16:48:29 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/19 10:25:07 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,10 @@ long	min_nbr(t_list *stack)
 	}
 	return(temp->num);
 }
+
+void	temp_lst_if_tmp()
+	if(temp)
+	{
+		temp->id = id++;
+		prev_min = temp->num;
+	}
