@@ -37,10 +37,10 @@ typedef struct t_list
 
 //stack n content
 void	create_stack(char	*agrv[], t_list **stack_a);
-void    add_node_to_stack(t_list, char **numbers, int *indx);
+void    add_node_to_stack(t_list **stack, char **numbers, int *indx);
 long	ft_atoi_v2(const char *str);
 t_list  *new_node(long num);
-void    add_node_back(t_list **stack, t_list *new);
+void	add_node_back(t_list **stack, t_list *new);
 t_list	*find_last_node(t_list *list);
 void    free_str(char  **content);
 void	look_to_duplicate_nmb(t_list *stack);

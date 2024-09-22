@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 11:54:27 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/19 10:47:48 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/21 21:45:19 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 void	search_lw_node_value(t_list *current, long prev_min, long *min_value, t_list **temp)
 {
-	if((current->num > prev_min) && (current->num) == *min_value)
+	while(current)
 	{
-		*min_value = current->num;
-		*temp = current;
+		if((current->num > prev_min) && (current->num) == *min_value)
+		{		
+			*min_value = current->num;
+			*temp = current;
+		}
+		current = current->next;
 	}
-	current = current->next;
 }
 
 t_list	**index_list(t_list **stack_a)
@@ -37,8 +40,16 @@ t_list	**index_list(t_list **stack_a)
 		current = *stack_a;
 		temp = NULL;
 		min_value = min_nbr(*stack_a);
+		//search_lw_node_value(current, prev_min, &min_value, &temp);
 		while(current)
-			search_lw_node_value(current, prev_min, &min_value, &temp);
+		{
+			if((current->num > prev_min) && (current->num) == *min_value)
+			{		
+				*min_value = current->num;
+				*temp = current;
+			}
+			current = current->next;
+		}
 		if(temp)
 		{
 			temp->id = id++;

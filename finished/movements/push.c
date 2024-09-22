@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 09:36:38 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/16 15:25:08 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/10 10:11:46 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ void	pa(t_list **stack_b, t_list **stack_a)
 		(*stack_a)->prev = temp;
 	*stack_a = temp;
 	temp->prev = NULL;
-	ft_putstr_fd("pa", STDERR_FILENO);
 }
 
 void	pb(t_list **stack_b, t_list **stack_a)
@@ -47,5 +46,4 @@ void	pb(t_list **stack_b, t_list **stack_a)
 		(*stack_b)->prev = temp;
 	*stack_b = temp;
 	temp->prev = NULL;
-	ft_putstr_fd("pb", STDERR_FILENO);
 }

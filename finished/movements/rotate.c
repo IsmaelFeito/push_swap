@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 15:24:20 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/16 15:26:33 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/10 09:32:42 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ void ra(t_list **stack_a)
 	*stack_a = first->next;
 	last->next = first;
 	first->next = NULL;
-	ft_putstr_fd("ra", STDERR_FILENO);
 }
 
 void rb(t_list **stack_b)
@@ -47,7 +46,6 @@ void rb(t_list **stack_b)
 	*stack_b = first->next;
 	last->next = first;
 	first->next = NULL;
-	ft_putstr_fd("rb", STDERR_FILENO);
 }
 
 void rr(t_list **stack_a, t_list **stack_b)
@@ -59,5 +57,4 @@ void rr(t_list **stack_a, t_list **stack_b)
 	}
 	ra(stack_a);
 	rb(stack_b);
-	ft_putstr_fd("rr", STDERR_FILENO);
 }

@@ -28,7 +28,7 @@ void	look_to_duplicate_nmb(t_list *stack)
 			if (stack->num == next_n->num)
 			{
 				ft_putstr_fd("error\n", STDERR_FILENO);
-				exit (EXIT_SUCCESS);
+				exit (EXIT_FAILURE);
 			}
 			next_n = next_n->next;
 		}
@@ -36,7 +36,7 @@ void	look_to_duplicate_nmb(t_list *stack)
 	}
 }
 
-void	add_node_to_stack(t_list **stack, char **content, size_t *indx)
+void	add_node_to_stack(t_list **stack, char **content, int *indx)
 {
 	int j;
 	long num;
@@ -68,7 +68,7 @@ void	add_node_to_stack(t_list **stack, char **content, size_t *indx)
 void	create_stack(char **argv, t_list **stack_a)
 {
 	int		i;
-	size_t		indx;
+	int		indx;
 	char	**content;
 	i = 0;
 	indx = 1;
@@ -77,10 +77,10 @@ void	create_stack(char **argv, t_list **stack_a)
 		if (argv[i][0] != '\0')
 		{
 			content = ft_split(argv[i], ' ');
-			index_str();
+			// index_str();
 			add_node_to_stack(stack_a, content, &indx);
 			look_to_duplicate_nmb(*stack_a);
-			stack_a = index_list(stack_a, index_str(content));
+			// stack_a = index_list(stack_a, index_str(content));
 			free_str(content);
 		}
 		else
