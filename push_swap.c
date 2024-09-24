@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 11:14:26 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/24 13:35:41 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/24 13:55:13 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 
 void main (int argc, char **argv)
 {
-    t_handler  *stack_a;
-
-    stack_a->head = NULL;
-    stack_a->size = 0;
+    t_list  **stack_a = NULL;
 
     create_stack(argv, stack_a);
+    printf("%d\n", (*stack_a)->num);
 }
