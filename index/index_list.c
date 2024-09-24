@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 11:54:27 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/24 13:52:49 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/24 13:56:14 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,10 @@ t_list	**index_list(t_list **stack_a)
 		//search_lw_node_value(current, prev_min, &min_value, &temp);
 		while(current)
 		{
-			if((current->num > prev_min) && (current->num) == *min_value)
+			if((current->num > prev_min) && (current->num) == min_value)
 			{		
-				*min_value = current->num;
-				*temp = current;
+				min_value = current->num;
+				temp = current;
 			}
 			current = current->next;
 		}
