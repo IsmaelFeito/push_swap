@@ -6,13 +6,19 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 11:14:26 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/18 12:09:56 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/24 13:35:41 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-void    push_swap(t_list **stack_a,. char  **argv)
+#include "lib/libft.h"
+
+void main (int argc, char **argv)
 {
+    t_handler  *stack_a;
+
+    stack_a->head = NULL;
+    stack_a->size = 0;
+
     create_stack(argv, stack_a);
-    
 }

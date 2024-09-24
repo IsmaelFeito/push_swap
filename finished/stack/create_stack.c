@@ -5,16 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/07 14:09:00 by ifeito-m          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2024/09/14 21:03:00 by ifeito-m         ###   ########.fr       */
-=======
-/*   Updated: 2024/09/13 15:36:04 by ifeito-m         ###   ########.fr       */
->>>>>>> 6a06b4694abf22665f76d109b655d4682ecd694e
+/*   Created: 2024/09/22 12:43:38 by ifeito-m          #+#    #+#             */
+/*   Updated: 2024/09/24 13:51:48 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../push_swap.h"
 
 void	look_to_duplicate_nmb(t_list *stack)
 {
@@ -41,6 +37,7 @@ void	add_node_to_stack(t_list **stack, char **content, int *indx)
 	int j;
 	long num;
 	t_list *node;
+	(void)indx;
 
 	num = 0;
 	if (!content[1])

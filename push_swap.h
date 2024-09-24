@@ -5,35 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/06 16:05:02 by ifeito-m          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2024/09/14 13:19:08 by ifeito-m         ###   ########.fr       */
-=======
-/*   Updated: 2024/09/13 17:07:22 by ifeito-m         ###   ########.fr       */
->>>>>>> 6a06b4694abf22665f76d109b655d4682ecd694e
+/*   Created: 2024/09/22 12:43:12 by ifeito-m          #+#    #+#             */
+/*   Updated: 2024/09/24 13:51:48 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "lib/libft.h"
+# include "finished/lib/libft.h"
 # include <unistd.h>
 # include <stdio.h>
 # include <stddef.h>
 # include <stdarg.h>
 # include <limits.h>
 
-typedef struct t_list
+typedef struct s_list
 {
-	size_t					id;
-	long				num;
-	int					cost;
-	
-	struct t_list *prev;
-	struct t_list *next;
-	struct t_list *swap;
-}						t_list;
+	size_t			id;
+	long			num;
+	int				cost;
+	struct s_list	*prev;
+	struct s_list	*next;
+	struct s_list	*swap;
+}	t_list;
+
+typedef struct s_handler
+{
+	struct s_list	*stack_a;
+	struct s_list	*stack_b;
+}	t_handler;
 
 //stack n content
 void	create_stack(char	*agrv[], t_list **stack_a);

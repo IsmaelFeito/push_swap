@@ -1,22 +1,32 @@
-NAME = libft.a
+NAME = push_swap
 
-SOURCES =		ft_isdigit.c ft_memset.c ft_strdup.c ft_strncmp.c \
+SRCS =	main.c \
+	finished/stack/create_stack.c \
+	finished/stack/stack_utils.c \
+	finished/stack/utils_2.c
 
-OBJECTS = $(SOURCES:.c=.o)
-
-CFLAGS = -Wall -Wextra -Werror
-REMOVE = rm -f
 CC = cc
+CFLAGS = -Wall -Wextra -Werror
+RM = rm -rf
+LIBFT = libft.a
+LIBFT_PATH = ./finished/lib/
 
-all: $(NAME)
+OBJS = ${SRCS:.c=.o}
 
-$(NAME): $(OBJECTS)
-	ar -rcs $(NAME) $(OBJECTS)
+all: ${NAME} 
+
+${NAME}: ${OBJS} ${LIBFT_PATH}${LIBFT}
+	@${CC} ${CFLAGS} ${OBJS} ${LIBFT_PATH}${LIBFT} -o ${NAME}
+
+${LIBFT_PATH}${LIBFT}:	
+	@make -C ${LIBFT_PATH} --silent
 
 clean:
-	$(REMOVE) $(OBJECTS)
+	@${RM} ${OBJS}
+	@make clean -C ${LIBFT_PATH}
+
 fclean: clean
-	$(REMOVE) $(NAME)
+	@${RM} ${NAME} ${LIBFT_PATH}${LIBFT}
 
 re: fclean all
 

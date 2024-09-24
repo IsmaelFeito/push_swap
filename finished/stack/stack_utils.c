@@ -5,16 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/07 14:39:31 by ifeito-m          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2024/09/14 11:51:52 by ifeito-m         ###   ########.fr       */
-=======
-/*   Updated: 2024/09/12 14:45:55 by ifeito-m         ###   ########.fr       */
->>>>>>> 6a06b4694abf22665f76d109b655d4682ecd694e
+/*   Created: 2024/09/22 13:01:06 by ifeito-m          #+#    #+#             */
+/*   Updated: 2024/09/24 13:51:48 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+
+#include "../../push_swap.h"
 
 t_list	*find_last_node(t_list *list)
 {

@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 19:36:54 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/14 12:11:07 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/22 13:15:53 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	{
 		if (u1[i] - u2[i])
 			return (u1[i] - u2[i]);
-		if (u1 == '\0' && u2 == '\0')
+		if (u1 == NULL && u2 == NULL)
 			return (0);
 		i++;
 	}

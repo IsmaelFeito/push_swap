@@ -30,7 +30,7 @@ bonus: $(BONUS_NAME)
 
 clean:
 	$(REMOVE) $(OBJECTS) $(BONUS_OBJS)
-+
+
 fclean: clean
 	$(REMOVE) $(NAME) $(BONUS_NAME)
 
