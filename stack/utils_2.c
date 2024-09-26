@@ -6,12 +6,12 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 13:01:13 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/24 13:52:13 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/26 10:48:20 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "../../push_swap.h"
+#include "../includes/push_swap.h"
 
 char	*ft_memcmp_v2(const void *s1, const void *s2, size_t n)
 {
@@ -32,9 +32,9 @@ char	*ft_memcmp_v2(const void *s1, const void *s2, size_t n)
 	return (NULL);
 }
 
-void	free_list(t_list **list)
+void	free_list(s_stack **list)
 {
-	t_list *tmp;
+	s_stack *tmp;
 
 	while (*list)
 	{

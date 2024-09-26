@@ -6,16 +6,16 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 15:24:20 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/24 13:51:48 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/26 10:26:49 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ra(t_list **stack_a)
+void ra(s_stack **stack_a)
 {
-	t_list *last;
-	t_list *first;
+	s_stack *last;
+	s_stack *first;
 
 	if (!*stack_a || !(*stack_a)->next)
 	{
@@ -30,10 +30,10 @@ void ra(t_list **stack_a)
 	first->next = NULL;
 }
 
-void rb(t_list **stack_b)
+void rb(s_stack **stack_b)
 {
-	t_list *last;
-	t_list *first;
+	s_stack *last;
+	s_stack *first;
 
 	if (!*stack_b || !(*stack_b)->next)
 	{
@@ -48,7 +48,7 @@ void rb(t_list **stack_b)
 	first->next = NULL;
 }
 
-void rr(t_list **stack_a, t_list **stack_b)
+void rr(s_stack **stack_a, s_stack **stack_b)
 {
 	if (!*stack_a || !(*stack_a)->next || !*stack_b || !(*stack_b)->next)
 	{

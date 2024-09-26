@@ -6,14 +6,14 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 13:01:06 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/24 13:51:48 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/26 10:58:24 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "../../push_swap.h"
+#include "../includes/push_swap.h"
 
-t_list	*find_last_node(t_list *list)
+s_stack	*find_last_node(s_stack *list)
 {
 	if (list == NULL)
 		return (NULL);
@@ -22,9 +22,9 @@ t_list	*find_last_node(t_list *list)
 	return (list);
 }
 
-void	add_node_back(t_list **stack, t_list *new)
+void	add_node_back(s_stack **stack, s_stack *new)
 {
-	t_list *enlace;
+	s_stack *enlace;
 
 	enlace = find_last_node(*stack);
 	if (*stack != NULL)
@@ -37,13 +37,14 @@ void	add_node_back(t_list **stack, t_list *new)
 		*stack = new;
 }
 
-t_list	*new_node(long num)
+s_stack	*new_node(int id, long num)
 {
-	t_list *node;
+	s_stack *node;
 
-	node = ft_calloc(1, sizeof(t_list));
+	node = ft_calloc(1, sizeof(s_stack));
 	if (!node)
 		return (NULL);
+	node->id = id;
 	node->num = num;
 	node->prev = NULL;
 	node->next = NULL;

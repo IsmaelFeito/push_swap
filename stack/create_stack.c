@@ -6,15 +6,15 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 12:43:38 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/24 13:51:48 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/26 10:55:14 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../includes/push_swap.h"
 
-void	look_to_duplicate_nmb(t_list *stack)
+void	look_to_duplicate_nmb(s_stack *stack)
 {
-	t_list	*next_n;
+	s_stack	*next_n;
 
 	while (stack)
 	{
@@ -32,12 +32,11 @@ void	look_to_duplicate_nmb(t_list *stack)
 	}
 }
 
-void	add_node_to_stack(t_list **stack, char **content, int *indx)
+void	add_node_to_stack(s_stack **stack, char **content, int *indx)
 {
-	int j;
-	long num;
-	t_list *node;
-	(void)indx;
+	int		 j;
+	long	 num;
+	s_stack *node;
 
 	num = 0;
 	if (!content[1])
@@ -45,7 +44,7 @@ void	add_node_to_stack(t_list **stack, char **content, int *indx)
 		num = ft_atoi_v2(content[0]);
 		if (num > (long)INT_MAX || num < (long)INT_MIN)
 			ft_putstr_fd("error\n", STDERR_FILENO);
-		node = new_node(num);
+		node = new_node((*index)++,num);
 		add_node_back(stack, node);
 	}
 	else
@@ -62,11 +61,12 @@ void	add_node_to_stack(t_list **stack, char **content, int *indx)
 	}
 }
 
-void	create_stack(char **argv, t_list **stack_a)
+void	create_stack(char **argv, s_stack **stack_a)
 {
 	int		i;
 	int		indx;
 	char	**content;
+	
 	i = 0;
 	indx = 1;
 	while (argv[++i])
@@ -74,10 +74,8 @@ void	create_stack(char **argv, t_list **stack_a)
 		if (argv[i][0] != '\0')
 		{
 			content = ft_split(argv[i], ' ');
-			// index_str();
 			add_node_to_stack(stack_a, content, &indx);
 			look_to_duplicate_nmb(*stack_a);
-			// stack_a = index_list(stack_a, index_str(content));
 			free_str(content);
 		}
 		else

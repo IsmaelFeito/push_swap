@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 18:31:28 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/04/08 19:41:25 by ifeito-m         ###   ########.fr       */
+/*   Created: 2024/04/08 11:41:50 by ifeito-m          #+#    #+#             */
+/*   Updated: 2024/09/26 10:26:49 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+s_stack	*ft_lstlast(s_stack *lst)
 {
-	t_list	*temp;
+	s_stack	*temp;
 
-	while (*lst)
+	temp = NULL;
+	if (lst == NULL)
+		return (lst);
+	while (lst != NULL)
 	{
-		temp = (*lst)-> next;
-		ft_lstdelone(*lst, del);
-		*lst = temp;
+		temp = lst;
+		lst = lst->next;
 	}
-	*lst = 0;
+	return (temp);
 }

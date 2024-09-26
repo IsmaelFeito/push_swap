@@ -6,13 +6,13 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 11:54:27 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/24 13:56:14 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/26 10:47:05 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
-void	search_lw_node_value(t_list *current, long prev_min, long *min_value, t_list **temp)
+void	search_lw_node_value(s_stack *current, long prev_min, long *min_value, s_stack **temp)
 {
 	while(current)
 	{
@@ -25,12 +25,12 @@ void	search_lw_node_value(t_list *current, long prev_min, long *min_value, t_lis
 	}
 }
 
-t_list	**index_list(t_list **stack_a)
+s_stack	**index_list(s_stack **stack_a)
 {
 	long	min_value;
 	long	prev_min;
-	t_list	*temp;
-	t_list	*current;
+	s_stack	*temp;
+	s_stack	*current;
 	size_t		id;
 	
 	id = 0;

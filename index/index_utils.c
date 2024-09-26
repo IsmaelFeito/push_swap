@@ -6,13 +6,13 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 11:53:45 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/24 13:56:35 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/26 10:47:50 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
-size_t	ft_lstsize_v2(t_list *lst)
+size_t	ft_lstsize_v2(s_stack *lst)
 {
 	size_t	i;
 
@@ -25,9 +25,9 @@ size_t	ft_lstsize_v2(t_list *lst)
 	return (i);
 }
 
-long	min_nbr(t_list *stack)
+long	min_nbr(s_stack *stack)
 {
-	t_list	*temp;
+	s_stack	*temp;
 
 	temp = stack;
 	while(stack)
