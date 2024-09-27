@@ -3,7 +3,9 @@ NAME = push_swap
 SRCS =	main.c \
 	stack/create_stack.c \
 	stack/stack_utils.c \
-	stack/utils_2.c
+	stack/utils_2.c \
+	index/index_list.c \
+	index/index_utils.c
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror

@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 12:43:12 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/27 03:31:31 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/27 17:09:28 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ typedef struct s_handler
 
 //stack n content
 void	create_stack(char	*agrv[], s_stack **stack_a);
-void    add_node_to_stack(s_stack **stack, char **numbers, int *indx);
+void    add_node_to_stack(s_stack **stack, char **numbers);
 long	ft_atoi_v2(const char *str);
-s_stack  *new_node(int id, long num);
+s_stack  *new_node(long num);
 void	add_node_back(s_stack **stack, s_stack *new);
 s_stack	*find_last_node(s_stack *list);
 void    free_str(char  **content);
@@ -50,11 +50,12 @@ void	free_list(s_stack **list);
 //provisional
 char	*ft_memcmp_v2(const void *s1, const void *s2, size_t n);
 char **index_str(char **content);
-s_stack	**index_list(s_stack **stack_a, char **nums);
+s_stack	**index_list(s_stack **stack_a);
 size_t	ft_lstsize_v2(s_stack *lst);
 int		pointer_size(char **nums);
 char	**order_ptr_2(char	**nums, char **temp);
 char	**order_ptr(char	**nums);
+int		min_nbr(s_stack *stack, long int prev_min);
 
 //movements
 void	pa(s_stack **stack_b, s_stack **stack_a);

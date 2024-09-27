@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 11:54:27 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/26 10:47:05 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/27 17:11:56 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,23 +27,23 @@ void	search_lw_node_value(s_stack *current, long prev_min, long *min_value, s_st
 
 s_stack	**index_list(s_stack **stack_a)
 {
-	long	min_value;
-	long	prev_min;
+	size_t	min_value;
+	size_t	prev_min;
 	s_stack	*temp;
 	s_stack	*current;
 	size_t		id;
 	
 	id = 0;
-	prev_min = (INT_MIN - 1);
+	prev_min = (LONG_MIN);
 	while(id < (ft_lstsize_v2(*stack_a)))
-	{
+	{	
 		current = *stack_a;
 		temp = NULL;
-		min_value = min_nbr(*stack_a);
-		//search_lw_node_value(current, prev_min, &min_value, &temp);
+		min_value = (size_t)min_nbr(*stack_a, prev_min);
+		
 		while(current)
 		{
-			if((current->num > prev_min) && (current->num) == min_value)
+			if((current->num > (long int)prev_min) && (current->num) == (long int)min_value)
 			{		
 				min_value = current->num;
 				temp = current;
@@ -53,6 +53,8 @@ s_stack	**index_list(s_stack **stack_a)
 		if(temp)
 		{
 			temp->id = id++;
+			//printf("%li ", temp->id);
+			//printf("%li\n", temp->num);
 			prev_min = temp->num;
 		}
 		else

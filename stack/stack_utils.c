@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 13:01:06 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/27 03:38:32 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/27 16:17:39 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,15 @@ void	add_node_back(s_stack **stack, s_stack *new)
 		*stack = new;
 }
 
-s_stack	*new_node(int id, long num)
+s_stack	*new_node(long num)
 {
 	s_stack *node;
-
+	//int	id;
+	
 	node = ft_calloc(1, sizeof(s_stack));
 	if (!node)
 		return (NULL);
-	node->id = id;
+	//node->id = id;
 	node->num = num;
 	node->prev = NULL;
 	node->next = NULL;

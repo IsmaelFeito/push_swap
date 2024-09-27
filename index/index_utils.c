@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 11:53:45 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/26 10:47:50 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/27 17:08:35 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,16 @@ size_t	ft_lstsize_v2(s_stack *lst)
 	return (i);
 }
 
-long	min_nbr(s_stack *stack)
+int min_nbr(s_stack *stack_a, long int prev_min)
 {
-	s_stack	*temp;
-
-	temp = stack;
-	while(stack)
-	{
-		if(stack->num < temp->num)
-			temp = stack;
-		stack = stack->next;
-	}
-	return(temp->num);
+    int min = INT_MAX;
+    while (stack_a)
+    {
+        if (stack_a->num > prev_min && stack_a->num < min)
+            min = stack_a->num;
+        stack_a = stack_a->next;
+    }
+    return min;
 }
 
 // void	temp_lst_if_tmp()
