@@ -1,15 +1,15 @@
 NAME = push_swap
 
 SRCS =	main.c \
-	finished/stack/create_stack.c \
-	finished/stack/stack_utils.c \
-	finished/stack/utils_2.c
+	stack/create_stack.c \
+	stack/stack_utils.c \
+	stack/utils_2.c
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
 LIBFT = libft.a
-LIBFT_PATH = ./finished/lib/
+LIBFT_PATH = ./lib/
 
 OBJS = ${SRCS:.c=.o}
 

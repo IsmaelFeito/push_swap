@@ -6,12 +6,13 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 13:01:06 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/26 10:58:24 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/27 03:38:32 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "../includes/push_swap.h"
+#include "../lib/libft.h"
 
 s_stack	*find_last_node(s_stack *list)
 {

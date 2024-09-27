@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 12:43:12 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/27 02:30:37 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/27 03:31:31 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ typedef struct s_handler
 void	create_stack(char	*agrv[], s_stack **stack_a);
 void    add_node_to_stack(s_stack **stack, char **numbers, int *indx);
 long	ft_atoi_v2(const char *str);
-s_stack  *new_node(long num);
+s_stack  *new_node(int id, long num);
 void	add_node_back(s_stack **stack, s_stack *new);
 s_stack	*find_last_node(s_stack *list);
 void    free_str(char  **content);

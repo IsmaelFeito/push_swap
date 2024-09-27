@@ -6,11 +6,12 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 12:43:38 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/27 02:31:02 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/27 04:43:16 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+# include "../lib/libft.h"
 
 void	look_to_duplicate_nmb(s_stack *stack)
 {
@@ -44,7 +45,9 @@ void	add_node_to_stack(s_stack **stack, char **content, int *indx)
 		num = ft_atoi_v2(content[0]);
 		if (num > (long)INT_MAX || num < (long)INT_MIN)
 			ft_putstr_fd("error\n", STDERR_FILENO);
-		node = new_node((indx)++,num);
+		node = new_node((*indx)++, num);
+	printf("%ld ", node->num);
+	printf("%ld\n", node->id);
 		add_node_back(stack, node);
 	}
 	else
@@ -55,13 +58,15 @@ void	add_node_to_stack(s_stack **stack, char **content, int *indx)
 			num = ft_atoi_v2(content[j++]);
 			if (num > (long)INT_MAX || num < (long)INT_MIN)
 				ft_putstr_fd("error\n", STDERR_FILENO);
-			node = new_node(num);
+			node = new_node((*indx)++, num);
+			printf("%ld ", node->num);
+			printf("%ld\n", node->id);
 			add_node_back(stack, node);
 		}
 	}
 }
 
-void	create_stack(char **argv, s_stack **stack_a)
+void	create_stack(char *argv[], s_stack **stack_a)
 {
 	int		i;
 	int		indx;
