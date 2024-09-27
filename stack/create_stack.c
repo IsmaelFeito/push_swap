@@ -6,15 +6,15 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 12:43:38 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/28 00:05:47 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/28 00:37:16 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	look_to_duplicate_nmb(s_stack *stack)
+void	look_to_duplicate_nmb(t_stack *stack)
 {
-	s_stack	*next_n;
+	t_stack	*next_n;
 
 	while (stack)
 	{
@@ -32,11 +32,11 @@ void	look_to_duplicate_nmb(s_stack *stack)
 	}
 }
 
-void	add_node_to_stack(s_stack **stack, char **content)
+void	add_node_to_stack(t_stack **stack, char **content)
 {
 	int		 j;
 	long	 num;
-	s_stack *node;
+	t_stack *node;
 
 	num = 0;
 	if (!content[1])
@@ -65,7 +65,7 @@ void	add_node_to_stack(s_stack **stack, char **content)
 	}
 }
 
-void	create_stack(char *argv[], s_stack **stack_a)
+int	create_stack(char *argv[], t_stack **stack_a)
 {
 	int		i;
 	char	**content;
@@ -76,18 +76,22 @@ void	create_stack(char *argv[], s_stack **stack_a)
 		if (argv[i][0] != '\0')
 		{
 			content = ft_split(argv[i], ' ');
+			if (!content)
+				return (KO);
 			add_node_to_stack(stack_a, content);
 			look_to_duplicate_nmb(*stack_a);
 			index_list(stack_a);
-			free_str(content);
+			free_array(content);
 		}
 		else
 			ft_putstr_fd("Error\n", STDERR_FILENO);
 	}
+	return (OK);
 }
- void print_stack_with_indices(s_stack *stack_a)
+
+void	print_stack_with_indices(t_stack *stack_a)
 {
-	s_stack *current = stack_a;
+	t_stack *current = stack_a;
 
 	while (current)
 	{

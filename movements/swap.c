@@ -6,13 +6,13 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 15:45:16 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/28 00:01:05 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/28 00:31:56 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(s_stack *stack_a)
+void	sa(t_stack *stack_a)
 {
 	int temp;
 
@@ -26,7 +26,7 @@ void	sa(s_stack *stack_a)
 	stack_a->next->num = temp;
 }
 
-void	sb(s_stack *stack_b)
+void	sb(t_stack *stack_b)
 {
 	int temp;
 
@@ -40,7 +40,7 @@ void	sb(s_stack *stack_b)
 	stack_b->next->num = temp;
 }
 
-void	ss(s_stack *stack_a, s_stack *stack_b)
+void	ss(t_stack *stack_a, t_stack *stack_b)
 {
 	int temp;
 

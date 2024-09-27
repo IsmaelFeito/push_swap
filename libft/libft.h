@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 15:18:41 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/27 15:33:10 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/28 00:30:47 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 # include <unistd.h>
 # include <unistd.h>
 //bonus
-typedef struct s_stack
+typedef struct s_list
 {
 	void				*content;
-	struct s_stack		*next;
+	struct s_list		*next;
 }	t_list;
 //main
 int		ft_atoi(const char *str);

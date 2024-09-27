@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 13:01:13 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/27 23:32:31 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/28 00:31:56 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ char	*ft_memcmp_v2(const void *s1, const void *s2, size_t n)
 	return (NULL);
 }
 
-void	free_list(s_stack **list)
+void	free_list(t_stack **list)
 {
-	s_stack *tmp;
+	t_stack *tmp;
 
 	while (*list)
 	{
@@ -45,7 +45,7 @@ void	free_list(s_stack **list)
 	free(list);
 }
 
-void	free_str(char **content)
+void	free_array(char **content)
 {
 	int	i = 0;
 

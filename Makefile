@@ -8,7 +8,7 @@ SRCS =	push_swap.c \
 	index/index_utils.c
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g3
 RM = rm -rf
 LIBFT = libft.a
 LIBFT_PATH = libft/

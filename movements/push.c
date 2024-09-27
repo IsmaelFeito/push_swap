@@ -6,15 +6,15 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 09:36:38 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/28 00:01:05 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/28 00:31:56 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pa(s_stack **stack_b, s_stack **stack_a)
+void	pa(t_stack **stack_b, t_stack **stack_a)
 {
-	s_stack *temp;
+	t_stack *temp;
 
 	if(!*stack_b)
 	{
@@ -30,9 +30,9 @@ void	pa(s_stack **stack_b, s_stack **stack_a)
 	temp->prev = NULL;
 }
 
-void	pb(s_stack **stack_b, s_stack **stack_a)
+void	pb(t_stack **stack_b, t_stack **stack_a)
 {
-	s_stack *temp;
+	t_stack *temp;
 
 	if(!*stack_a)
 	{

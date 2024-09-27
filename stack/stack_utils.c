@@ -6,14 +6,14 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 13:01:06 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/28 00:01:05 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/28 00:38:12 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "../includes/push_swap.h"
 
-s_stack	*find_last_node(s_stack *list)
+t_stack	*find_last_node(t_stack *list)
 {
 	if (list == NULL)
 		return (NULL);
@@ -22,9 +22,9 @@ s_stack	*find_last_node(s_stack *list)
 	return (list);
 }
 
-void	add_node_back(s_stack **stack, s_stack *new)
+void	add_node_back(t_stack **stack, t_stack *new)
 {
-	s_stack *enlace;
+	t_stack *enlace;
 
 	enlace = find_last_node(*stack);
 	if (*stack != NULL)
@@ -37,12 +37,12 @@ void	add_node_back(s_stack **stack, s_stack *new)
 		*stack = new;
 }
 
-s_stack	*new_node(long num)
+t_stack	*new_node(long num)
 {
-	s_stack *node;
+	t_stack *node;
 	//int	id;
 	
-	node = ft_calloc(1, sizeof(s_stack));
+	node = ft_calloc(1, sizeof(t_stack));
 	if (!node)
 		return (NULL);
 	//node->id = id;
@@ -67,15 +67,12 @@ long	ft_atoi_v2(const char *str)
 		if (str[i++] == '-')
 			sign *= -1;
 		if (str[i] == '+' || str[i] == '-')
-		{
-			ft_putstr_fd("Error\n", STDERR_FILENO);
-			exit(EXIT_FAILURE);
-		}
+			return (ft_putstr_fd("Error\n", STDERR_FILENO), 2147483648);
 	}
 	nbr = 0;
 	if (!ft_isdigit(str[i]))
 		ft_putstr_fd("Error\n", STDERR_FILENO);
-	while (ft_isdigit(str[i]))
+	while (ft_isdigit(str[i]) && i < 12)
 		nbr = (nbr * 10) + (str[i++] - '0');
 	if (nbr > INT_MAX || nbr < INT_MIN)
 		ft_putstr_fd("Error\n", STDERR_FILENO);
