@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 09:36:38 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/26 10:26:49 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/28 00:01:05 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	pa(s_stack **stack_b, s_stack **stack_a)
 
 	if(!*stack_b)
 	{
-		ft_putstr_fd("error\n", STDERR_FILENO);
+		ft_putstr_fd("Error\n", STDERR_FILENO);
 		return;
 	}
 	temp = *stack_b;
@@ -36,7 +36,7 @@ void	pb(s_stack **stack_b, s_stack **stack_a)
 
 	if(!*stack_a)
 	{
-		ft_putstr_fd("error\n", STDERR_FILENO);
+		ft_putstr_fd("Error\n", STDERR_FILENO);
 		return;
 	}
 	temp = *stack_a;

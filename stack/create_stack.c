@@ -6,12 +6,11 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 12:43:38 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/27 17:42:56 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/28 00:05:47 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-# include "../lib/libft.h"
 
 void	look_to_duplicate_nmb(s_stack *stack)
 {
@@ -24,7 +23,7 @@ void	look_to_duplicate_nmb(s_stack *stack)
 		{
 			if (stack->num == next_n->num)
 			{
-				ft_putstr_fd("error\n", STDERR_FILENO);
+				ft_putstr_fd("Error\n", STDERR_FILENO);
 				exit (EXIT_FAILURE);
 			}
 			next_n = next_n->next;
@@ -44,7 +43,7 @@ void	add_node_to_stack(s_stack **stack, char **content)
 	{
 		num = ft_atoi_v2(content[0]);
 		if (num > (long)INT_MAX || num < (long)INT_MIN)
-			ft_putstr_fd("error\n", STDERR_FILENO);
+			ft_putstr_fd("Error\n", STDERR_FILENO);
 		node = new_node(num);
 	//printf("%ld ", node->num);
 	//printf("%ld\n", node->id);
@@ -57,7 +56,7 @@ void	add_node_to_stack(s_stack **stack, char **content)
 		{
 			num = ft_atoi_v2(content[j++]);
 			if (num > (long)INT_MAX || num < (long)INT_MIN)
-				ft_putstr_fd("error\n", STDERR_FILENO);
+				ft_putstr_fd("Error\n", STDERR_FILENO);
 			node = new_node(num);
 		//printf("%ld ", node->num);
 		//printf("%ld\n", node->id);
@@ -69,11 +68,9 @@ void	add_node_to_stack(s_stack **stack, char **content)
 void	create_stack(char *argv[], s_stack **stack_a)
 {
 	int		i;
-	//int		indx;
 	char	**content;
 	
 	i = 0;
-	//indx = 1;
 	while (argv[++i])
 	{
 		if (argv[i][0] != '\0')
@@ -85,7 +82,7 @@ void	create_stack(char *argv[], s_stack **stack_a)
 			free_str(content);
 		}
 		else
-			ft_putstr_fd("error\n", STDERR_FILENO);
+			ft_putstr_fd("Error\n", STDERR_FILENO);
 	}
 }
  void print_stack_with_indices(s_stack *stack_a)

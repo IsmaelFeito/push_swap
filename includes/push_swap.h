@@ -6,14 +6,14 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 12:43:12 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/27 17:41:26 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/27 23:31:38 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "../lib/libft.h"
+# include "../libft/libft.h"
 # include <unistd.h>
 # include <stdio.h>
 # include <stddef.h>

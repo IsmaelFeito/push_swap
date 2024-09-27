@@ -6,13 +6,12 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 13:01:13 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/27 03:41:52 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/27 23:32:31 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "../includes/push_swap.h"
-# include "../lib/libft.h"
 
 char	*ft_memcmp_v2(const void *s1, const void *s2, size_t n)
 {

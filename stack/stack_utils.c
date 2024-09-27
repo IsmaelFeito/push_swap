@@ -6,13 +6,12 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 13:01:06 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/27 16:17:39 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/28 00:01:05 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "../includes/push_swap.h"
-#include "../lib/libft.h"
 
 s_stack	*find_last_node(s_stack *list)
 {
@@ -60,20 +59,25 @@ long	ft_atoi_v2(const char *str)
 	long sign;
 
 	i = 0;
-	while ((str[i] < 14 && str[i] > 8) || str[i] == ' ')
+	while (str[i] == ' ')
 		i++;
 	sign = 1;
 	while (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i++] == '-')
 			sign *= -1;
+		if (str[i] == '+' || str[i] == '-')
+		{
+			ft_putstr_fd("Error\n", STDERR_FILENO);
+			exit(EXIT_FAILURE);
+		}
 	}
 	nbr = 0;
 	if (!ft_isdigit(str[i]))
-		ft_putstr_fd("error\n", STDERR_FILENO);
+		ft_putstr_fd("Error\n", STDERR_FILENO);
 	while (ft_isdigit(str[i]))
 		nbr = (nbr * 10) + (str[i++] - '0');
 	if (nbr > INT_MAX || nbr < INT_MIN)
-		ft_putstr_fd("error\n", STDERR_FILENO);
+		ft_putstr_fd("Error\n", STDERR_FILENO);
 	return (nbr * sign);
 }
