@@ -23,7 +23,7 @@ ${LIBFT_PATH}${LIBFT}:
 
 clean:
 	@${RM} ${OBJS}
-	@make clean -C ${LIBFT_PATH}
+	@make fclean -C ${LIBFT_PATH}
 
 fclean: clean
 	@${RM} ${NAME} ${LIBFT_PATH}${LIBFT}
