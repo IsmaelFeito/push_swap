@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 12:43:38 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/26 10:55:14 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/27 02:31:02 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	add_node_to_stack(s_stack **stack, char **content, int *indx)
 		num = ft_atoi_v2(content[0]);
 		if (num > (long)INT_MAX || num < (long)INT_MIN)
 			ft_putstr_fd("error\n", STDERR_FILENO);
-		node = new_node((*index)++,num);
+		node = new_node((indx)++,num);
 		add_node_back(stack, node);
 	}
 	else

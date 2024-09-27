@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 13:01:13 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/26 10:48:20 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/27 02:23:32 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,39 +64,4 @@ int		pointer_size(char **arr)
 	while (arr[size])
 		size++;
 	return (size);
-}
-
-char	**ordered_array(char	**content)
-{
-	char	**order;
-	int		i = -1;
-	int		j = 0;
-	
-	order = malloc(pointer_size(content) * sizeof(char *));
-	if(!order)
-		return (NULL);
-	while(content[++i])
-		order[i] = content[i];
-	i = 0;
-	while(i < (pointer_size(order) - 1))//i < tamaño ptr - '\0'
-	{
-		j = i + 1;
-		while(j < pointer_size(order))
-		{
-			if(ft_memcmp(content[i++], order[j], 1) < 0)
-			{
-				ft_memcpy(order[j], content[i], sizeof(char *));
-				if(i == pointer_size(order) - 1)
-				{
-					i = 0;
-					j++;
-					if((ft_memcmp(content[i++], order[j], 1) < 0) && (j < pointer_size(order)) && (order[j - 1] != order[j]))
-						ft_memcpy(order[j], content[i], sizeof(char *));
-				}
-			}
-		}
-		j++;
-		i++;
-	}
-	return(order);
 }

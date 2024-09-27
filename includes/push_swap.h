@@ -6,28 +6,28 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 12:43:12 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/26 10:44:47 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/27 02:30:37 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "finished/lib/libft.h"
+# include "../lib/libft.h"
 # include <unistd.h>
 # include <stdio.h>
 # include <stddef.h>
 # include <stdarg.h>
 # include <limits.h>
 
-typedef struct s_stack
+typedef struct t_stack
 {
 	size_t			id;
 	long			num;
 	int				cost;
-	struct s_stack	*prev;
-	struct s_stack	*next;
-	struct s_stack	*swap;
+	struct t_stack	*prev;
+	struct t_stack	*next;
+	struct t_stack	*swap;
 }	s_stack;
 
 typedef struct s_handler
