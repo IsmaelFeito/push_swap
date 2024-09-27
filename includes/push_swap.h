@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 12:43:12 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/27 17:09:28 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/27 17:41:26 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,9 @@ int		pointer_size(char **nums);
 char	**order_ptr_2(char	**nums, char **temp);
 char	**order_ptr(char	**nums);
 int		min_nbr(s_stack *stack, long int prev_min);
+
+//print_indexes_proof
+void print_stack_with_indices(s_stack *stack_a);
 
 //movements
 void	pa(s_stack **stack_b, s_stack **stack_a);

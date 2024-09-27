@@ -9,7 +9,8 @@ int main (int argc, char **argv)
     stack_a = ft_calloc(1, sizeof(s_stack *));
 	stack_b = ft_calloc(1, sizeof(s_stack *));
     create_stack(argv, stack_a);
+    print_stack_with_indices(*stack_a);
     free_list(stack_a);
-	free_list(stack_b);
+	free_list(stack_b);;
     return 0;
 }

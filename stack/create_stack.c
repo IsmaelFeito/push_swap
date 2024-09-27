@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 12:43:38 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/27 17:13:59 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/27 17:42:56 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ void	add_node_to_stack(s_stack **stack, char **content)
 		if (num > (long)INT_MAX || num < (long)INT_MIN)
 			ft_putstr_fd("error\n", STDERR_FILENO);
 		node = new_node(num);
-	printf("%ld ", node->num);
-	printf("%ld\n", node->id);
+	//printf("%ld ", node->num);
+	//printf("%ld\n", node->id);
 		add_node_back(stack, node);
 	}
 	else
@@ -59,8 +59,8 @@ void	add_node_to_stack(s_stack **stack, char **content)
 			if (num > (long)INT_MAX || num < (long)INT_MIN)
 				ft_putstr_fd("error\n", STDERR_FILENO);
 			node = new_node(num);
-		printf("%ld ", node->num);
-		printf("%ld\n", node->id);
+		//printf("%ld ", node->num);
+		//printf("%ld\n", node->id);
 			add_node_back(stack, node);
 		}
 	}
@@ -86,5 +86,15 @@ void	create_stack(char *argv[], s_stack **stack_a)
 		}
 		else
 			ft_putstr_fd("error\n", STDERR_FILENO);
+	}
+}
+ void print_stack_with_indices(s_stack *stack_a)
+{
+	s_stack *current = stack_a;
+
+	while (current)
+	{
+		printf("Valor: %ld, Índice: %zu\n", current->num, current->id);
+		current = current->next;
 	}
 }
