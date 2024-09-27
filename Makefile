@@ -9,7 +9,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
 LIBFT = libft.a
-LIBFT_PATH = ./lib/
+LIBFT_PATH = lib/
 
 OBJS = ${SRCS:.c=.o}
 
@@ -19,7 +19,7 @@ ${NAME}: ${OBJS} ${LIBFT_PATH}${LIBFT}
 	@${CC} ${CFLAGS} ${OBJS} ${LIBFT_PATH}${LIBFT} -o ${NAME}
 
 ${LIBFT_PATH}${LIBFT}:	
-	@make -C ${LIBFT_PATH} --silent
+	@make bonus -C ${LIBFT_PATH} --silent
 
 clean:
 	@${RM} ${OBJS}

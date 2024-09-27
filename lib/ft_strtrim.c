@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 18:16:50 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/04/04 13:26:48 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/27 15:27:02 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ static int	is_in_set(char c, const char *set)
 char	*ft_strtrim(const char *s1, const char *set)
 {
 	size_t			len_s1;
-	size_t			len_set;
 	const char		*first;
 	const char		*last;
 	char			*total;
@@ -34,7 +33,6 @@ char	*ft_strtrim(const char *s1, const char *set)
 	if (!s1 || !set)
 		return (NULL);
 	len_s1 = ft_strlen(s1);
-	len_set = ft_strlen(set);
 	first = s1;
 	last = s1 + len_s1 - 1;
 	while (first <= last && is_in_set(*first, set))

@@ -6,13 +6,13 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 11:29:47 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/26 10:26:49 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/27 15:34:52 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(s_stack *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	i;
 

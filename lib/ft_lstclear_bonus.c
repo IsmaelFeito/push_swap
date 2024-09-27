@@ -6,15 +6,15 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 18:31:28 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/26 10:26:49 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/27 15:33:39 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(s_stack **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	s_stack	*temp;
+	t_list	*temp;
 
 	while (*lst)
 	{

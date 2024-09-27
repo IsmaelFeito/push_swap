@@ -6,17 +6,17 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 12:21:50 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/26 10:26:49 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/27 15:45:15 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-s_stack	*ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
-	s_stack	*temp;
+	t_list	*temp;
 
-	temp = (s_stack *)malloc(sizeof(s_stack));
+	temp = (t_list *)malloc(sizeof(t_list));
 	if (temp == NULL)
 		return (NULL);
 	temp->content = content;
