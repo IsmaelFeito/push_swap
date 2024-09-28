@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 12:43:12 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/28 00:37:06 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/28 01:58:24 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ t_stack		*new_node(long num);
 void		add_node_back(t_stack **stack, t_stack *new);
 t_stack		*find_last_node(t_stack *list);
 void		free_array(char **content);
-void		look_to_duplicate_nmb(t_stack *stack);
+int		look_to_duplicate_nmb(t_stack *stack);
 void		free_list(t_stack **list);
 
 //provisional
