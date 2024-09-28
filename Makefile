@@ -1,11 +1,16 @@
 NAME = push_swap
 
-SRCS =	push_swap.c \
-	stack/create_stack.c \
-	stack/stack_utils.c \
-	stack/utils_2.c \
-	index/index_list.c \
-	index/index_utils.c
+SRCS =		index/index_list.c \
+			index/index_utils.c \
+			movements/push.c \
+			movements/reverse_rotate.c \
+			movements/rotate.c \
+			movements/swap.c \
+			push_swap.c \
+			stack/utils_2.c \
+			stack/create_stack.c \
+			stack/stack_utils.c \
+			k-sort/k-sort.c \
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g3
