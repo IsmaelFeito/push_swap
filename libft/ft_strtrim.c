@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 18:16:50 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/27 15:27:02 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/28 12:27:50 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int main(void)
     if (trimmed) {
         printf("Cadena original: \"%s\"\n", s1);
         printf("Cadena después de eliminar: \"%s\"\n", trimmed);
-        free(trimmed); // Libera la memoria asignada por ft_strtrim
+        freedom((void **)&trimmed); // Libera la memoria asignada por ft_strtrim
     } else {
         printf("Error: No se pudo realizar la operación.\n");
     }

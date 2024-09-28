@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 11:14:26 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/28 05:29:09 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/28 12:37:39 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static int	is_sorted(t_stack *stack_a)
 {
-	int		prev;
+	size_t	prev;
 	
 	prev = stack_a->id;
 	stack_a = stack_a->next;
@@ -43,6 +43,5 @@ int main (int argc, char **argv)
 	if (is_sorted(stack_a) == KO)
 		sorteator(&stack_a, &stack_b);
 	free_list(&stack_a);
-	free_list(&stack_b);
 	return (OK);
 }

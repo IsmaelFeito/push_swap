@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 15:38:38 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/28 05:09:21 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/28 11:48:49 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void rra(t_stack **stack_a, int print_flag)
 	if (!*stack_a || !(*stack_a)->next)
 		return;
 	last = find_last_node(*stack_a);
-	scnd_last = last->prev;
-
+	scnd_last = *stack_a;
+	while (scnd_last->next != last)
+		scnd_last = scnd_last->next;
 	last->next = *stack_a;
-	(*stack_a)->prev = last;
 	scnd_last->next = NULL;
 	*stack_a = last;
 	if (print_flag == OK)
@@ -32,17 +32,17 @@ void rra(t_stack **stack_a, int print_flag)
 
 void rrb(t_stack **stack_b, int print_flag)
 {
+	t_stack *scnd_last;
 	t_stack *last;
-	t_stack *scnd_lst;
 
 	if (!*stack_b || !(*stack_b)->next)
 		return;
 	last = find_last_node(*stack_b);
-	scnd_lst = last->prev;
-
+	scnd_last = *stack_b;
+	while (scnd_last->next != last)
+		scnd_last = scnd_last->next;
 	last->next = *stack_b;
-	(*stack_b)->prev = last;
-	scnd_lst->next = NULL;
+	scnd_last->next = NULL;
 	*stack_b = last;
 	if (print_flag == OK)
 		ft_putstr_fd("rrb\n", STDOUT_FILENO);

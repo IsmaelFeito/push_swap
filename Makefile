@@ -11,6 +11,7 @@ SRCS =		index/index_list.c \
 			stack/create_stack.c \
 			stack/stack_utils.c \
 			k-sort/k-sort.c \
+			k-sort/simple_sort.c \
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g3

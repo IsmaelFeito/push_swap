@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 19:34:55 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/04/04 17:37:14 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/28 12:27:50 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int main(void)
     char *cadena = ft_itoa(numero);
 
     printf("El número como cadena de caracteres es: %s\n", cadena);
-    free(cadena);
+    freedom((void **)&cadena);
     return 0;
 }
 */
