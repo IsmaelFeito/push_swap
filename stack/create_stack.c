@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 12:43:38 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/28 02:19:00 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/28 02:29:31 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int	create_stack(char *argv[], t_stack **stack_a)
 		{
 			content = ft_split(argv[i], ' ');
 			if (!content)
-				return (free_list(stack_a), KO);
+				return (free_list(stack_a), ft_putstr_fd("Error\n", STDERR_FILENO), KO);
 			add_node_to_stack(stack_a, content);
 			free_array(content);
 			if (look_to_duplicate_nmb(*stack_a) == KO)
