@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 04:16:59 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/28 14:02:57 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/29 19:17:31 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ static size_t	ft_stacksize(t_stack *lst)
 	return (i);
 }
 
-static void	push_to_b(t_stack **stack_a, t_stack **stack_b, size_t *size_a, size_t *size_b)
+static void	push_to_b(t_stack **stack_a, t_stack **stack_b, \
+											size_t *size_a, size_t *size_b)
 {
 	size_t		range;
 
@@ -39,7 +40,7 @@ static void	push_to_b(t_stack **stack_a, t_stack **stack_b, size_t *size_a, size
 			pb(stack_a, stack_b, size_a, size_b);
 			if (!((*stack_a)->id <= *size_b + range))
 				rr(stack_a, stack_b);
-			else	
+			else
 				rb(stack_b, OK);
 		}
 		else
@@ -47,7 +48,8 @@ static void	push_to_b(t_stack **stack_a, t_stack **stack_b, size_t *size_a, size
 	}
 }
 
-static void	push_to_a(t_stack **stack_a, t_stack **stack_b, size_t *size_a, size_t *size_b)
+static void	push_to_a(t_stack **stack_a, t_stack **stack_b, \
+											size_t *size_a, size_t *size_b)
 {
 	while (*size_b > 0)
 	{
@@ -62,7 +64,6 @@ static void	push_to_a(t_stack **stack_a, t_stack **stack_b, size_t *size_a, size
 	}
 }
 
-
 void	sorteator(t_stack **stack_a, t_stack **stack_b)
 {
 	size_t	size_a;
@@ -70,7 +71,6 @@ void	sorteator(t_stack **stack_a, t_stack **stack_b)
 
 	size_a = ft_stacksize(*stack_a);
 	size_b = ft_stacksize(*stack_b);
-	
 	if (size_a > 5)
 	{
 		push_to_b(stack_a, stack_b, &size_a, &size_b);

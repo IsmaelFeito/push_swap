@@ -6,19 +6,19 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 15:38:38 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/28 11:48:49 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/29 19:06:04 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void rra(t_stack **stack_a, int print_flag)
+void	rra(t_stack **stack_a, int print_flag)
 {
-	t_stack *scnd_last;
-	t_stack *last;
+	t_stack	*scnd_last;
+	t_stack	*last;
 
 	if (!*stack_a || !(*stack_a)->next)
-		return;
+		return ;
 	last = find_last_node(*stack_a);
 	scnd_last = *stack_a;
 	while (scnd_last->next != last)
@@ -30,13 +30,13 @@ void rra(t_stack **stack_a, int print_flag)
 		ft_putstr_fd("rra\n", STDOUT_FILENO);
 }
 
-void rrb(t_stack **stack_b, int print_flag)
+void	rrb(t_stack **stack_b, int print_flag)
 {
-	t_stack *scnd_last;
-	t_stack *last;
+	t_stack	*scnd_last;
+	t_stack	*last;
 
 	if (!*stack_b || !(*stack_b)->next)
-		return;
+		return ;
 	last = find_last_node(*stack_b);
 	scnd_last = *stack_b;
 	while (scnd_last->next != last)
@@ -48,10 +48,10 @@ void rrb(t_stack **stack_b, int print_flag)
 		ft_putstr_fd("rrb\n", STDOUT_FILENO);
 }
 
-void rrr(t_stack **stack_a, t_stack **stack_b)
+void	rrr(t_stack **stack_a, t_stack **stack_b)
 {
 	if (!*stack_a || !(*stack_a)->next || !*stack_b || !(*stack_b)->next)
-		return;
+		return ;
 	rra(stack_a, KO);
 	rrb(stack_b, KO);
 	ft_putstr_fd("rrr\n", STDOUT_FILENO);

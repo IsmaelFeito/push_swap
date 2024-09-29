@@ -6,18 +6,19 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 11:54:27 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/28 02:12:33 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/29 19:42:14 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	search_lw_node_value(t_stack *current, long prev_min, long *min_value, t_stack **temp)
+void	srch_lw_nd_vle(t_stack *current, long prev_min,
+long *min_value, t_stack **temp)
 {
-	while(current)
+	while (current)
 	{
-		if((current->num > prev_min) && (current->num) == *min_value)
-		{		
+		if ((current->num > prev_min) && (current->num) == *min_value)
+		{
 			*min_value = current->num;
 			*temp = current;
 		}
@@ -32,19 +33,19 @@ t_stack	**index_list(t_stack **stack_a)
 	t_stack		*temp;
 	t_stack		*current;
 	size_t		id;
-	
+
 	id = 0;
 	prev_min = (LONG_MIN);
 	while (id < (ft_lstsize_v2(*stack_a)))
-	{	
+	{
 		current = *stack_a;
 		temp = NULL;
 		min_value = (size_t)min_nbr(*stack_a, prev_min);
-		
 		while (current)
 		{
-			if ((current->num > (long int)prev_min) && (current->num) == (long int)min_value)
-			{		
+			if ((current->num > (long int)prev_min) && \
+									(current->num) == (long int)min_value)
+			{
 				min_value = current->num;
 				temp = current;
 			}
@@ -53,8 +54,6 @@ t_stack	**index_list(t_stack **stack_a)
 		if (temp)
 		{
 			temp->id = id++;
-			//printf("%li ", temp->id);
-			//printf("%li\n", temp->num);
 			prev_min = temp->num;
 		}
 		else

@@ -6,20 +6,19 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 13:01:13 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/28 12:44:37 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/29 19:09:57 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../includes/push_swap.h"
 
 char	*ft_memcmp_v2(const void *s1, const void *s2, size_t n)
 {
-	size_t					i;
-	char			*u1;
-	char		*u2;
+	size_t	i;
+	char	*u1;
+	char	*u2;
+
 	(void)n;
-	
 	u1 = (char *)s1;
 	u2 = (char *)s2;
 	i = 0;
@@ -46,8 +45,9 @@ void	free_list(t_stack **list)
 
 void	free_array(char **content)
 {
-	int	i = 0;
+	int	i;
 
+	i = 0;
 	while (content[i])
 		freedom((void **)&content[i++]);
 	freedom((void **)&content);

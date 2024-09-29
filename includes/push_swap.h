@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 12:43:12 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/28 12:28:06 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/29 19:02:49 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,10 @@ int			min_nbr(t_stack *stack_a, long int prev_min);
 void		print_stack_with_indices(t_stack *stack_a);
 
 //movements
-void		pa(t_stack **stack_a, t_stack **stack_b, size_t *size_a, size_t *size_b);
-void		pb(t_stack **stack_a, t_stack **stack_b, size_t *size_a, size_t *size_b);
+void		pa(t_stack **stack_a, t_stack **stack_b, \
+								size_t *size_a, size_t *size_b);
+void		pb(t_stack **stack_a, t_stack **stack_b, \
+								size_t *size_a, size_t *size_b);
 void		rrr(t_stack **stack_a, t_stack **stack_b);
 void		rra(t_stack **stack_a, int print_flag);
 void		rrb(t_stack **stack_b, int print_flag);
@@ -66,7 +68,8 @@ void		sb(t_stack **stack_b, int print_flag);
 
 //algorithm
 size_t		stack_get_pos(t_stack *stack, size_t index);
-void		simple_sort(t_stack **stack_a, t_stack **stack_b, size_t *size_a, size_t *size_b);
+void		simple_sort(t_stack **stack_a, t_stack **stack_b, \
+								size_t *size_a, size_t *size_b);
 void		sorteator(t_stack **stack_a, t_stack **stack_b);
 
 #endif

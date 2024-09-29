@@ -6,10 +6,9 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 13:01:06 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/28 12:06:02 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/29 19:14:31 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../includes/push_swap.h"
 
@@ -24,7 +23,7 @@ t_stack	*find_last_node(t_stack *list)
 
 void	add_node_back(t_stack **stack, t_stack *new)
 {
-	t_stack *enlace;
+	t_stack	*enlace;
 
 	enlace = find_last_node(*stack);
 	if (*stack != NULL)
@@ -38,8 +37,8 @@ void	add_node_back(t_stack **stack, t_stack *new)
 
 t_stack	*new_node(long num)
 {
-	t_stack *node;
-	
+	t_stack	*node;
+
 	node = ft_calloc(1, sizeof(t_stack));
 	if (!node)
 		return (NULL);
@@ -50,9 +49,9 @@ t_stack	*new_node(long num)
 
 long	ft_atoi_v2(const char *str)
 {
-	int i;
-	long nbr;
-	long sign;
+	int		i;
+	long	nbr;
+	long	sign;
 
 	i = 0;
 	while (str[i] == ' ')
@@ -78,7 +77,7 @@ long	ft_atoi_v2(const char *str)
 size_t	stack_get_pos(t_stack *stack, size_t index)
 {
 	size_t	i;
-	
+
 	i = 0;
 	while (stack)
 	{

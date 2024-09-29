@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 05:29:47 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/28 12:13:33 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/29 19:41:38 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,21 @@ static void	sort_three(t_stack **stack_a)
 			rra(stack_a, OK);
 	}
 	else if ((*stack_a)->id == 0)
+	{
 		if ((*stack_a)->next->id == 2)
 		{
 			rra(stack_a, OK);
 			sa(stack_a, OK);
 		}
+	}
 }
 
-void	simple_sort(t_stack **stack_a, t_stack **stack_b, size_t *size_a, size_t *size_b)
+void	simple_sort(t_stack **stack_a, t_stack **stack_b, \
+											size_t *size_a, size_t *size_b)
 {
 	while (*size_a == 5)
 	{
-		if (((*size_a)- 1) == (*stack_a)->id)
+		if (((*size_a) - 1) == (*stack_a)->id)
 			pb(stack_a, stack_b, size_a, size_b);
 		else if (stack_get_pos(*stack_a, 4) <= 2)
 		{
@@ -53,7 +56,7 @@ void	simple_sort(t_stack **stack_a, t_stack **stack_b, size_t *size_a, size_t *s
 	}
 	while (*size_a == 4)
 	{
-		if (((*size_a)- 1) == (*stack_a)->id)
+		if (((*size_a) - 1) == (*stack_a)->id)
 			pb(stack_a, stack_b, size_a, size_b);
 		else if (stack_get_pos(*stack_a, 3) <= 1)
 		{

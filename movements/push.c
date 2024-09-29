@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 09:36:38 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/28 11:46:07 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/29 19:04:49 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	pa(t_stack **stack_a, t_stack **stack_b, size_t *size_a, size_t *size_b)
 {
 	t_stack		*temp;
 
-	if(!*stack_b)
-		return;
+	if (!*stack_b)
+		return ;
 	temp = *stack_b;
 	*stack_b = (*stack_b)->next;
 	temp->next = *stack_a;
@@ -31,8 +31,8 @@ void	pb(t_stack **stack_a, t_stack **stack_b, size_t *size_a, size_t *size_b)
 {
 	t_stack		*temp;
 
-	if(!*stack_a)
-		return;
+	if (!*stack_a)
+		return ;
 	temp = *stack_a;
 	*stack_a = (*stack_a)->next;
 	temp->next = *stack_b;
