@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 05:29:47 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/29 19:41:38 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/30 13:14:33 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,38 +36,42 @@ static void	sort_three(t_stack **stack_a)
 		}
 	}
 }
+static void sort_four(t_stack **stack_a, t_stack **stack_b, size_t *size_a, size_t *size_b)
+{
+	if (((*size_a) - 1) == (*stack_a)->id)
+		pb(stack_a, stack_b, size_a, size_b);
+	else if (stack_get_pos(*stack_a, 3) <= 1)
+	{
+		if ((*stack_a)->id <= 1 && stack_get_pos(*stack_a, 3) == 1)
+			sa(stack_a, OK);
+		else
+			ra(stack_a, OK);
+	}
+	else
+		rra(stack_a, OK);
+}
 
+static void sort_five(t_stack **stack_a, t_stack **stack_b, size_t *size_a, size_t *size_b)
+{
+	if (((*size_a) - 1) == (*stack_a)->id)
+		pb(stack_a, stack_b, size_a, size_b);
+	else if (stack_get_pos(*stack_a, 4) <= 2)
+	{
+		if ((*stack_a)->id <= 2 && stack_get_pos(*stack_a, 4) == 1)
+			sa(stack_a, OK);
+		else
+			ra(stack_a, OK);
+	}
+	else
+		rra(stack_a, OK);
+}
 void	simple_sort(t_stack **stack_a, t_stack **stack_b, \
 											size_t *size_a, size_t *size_b)
 {
 	while (*size_a == 5)
-	{
-		if (((*size_a) - 1) == (*stack_a)->id)
-			pb(stack_a, stack_b, size_a, size_b);
-		else if (stack_get_pos(*stack_a, 4) <= 2)
-		{
-			if ((*stack_a)->id <= 2 && stack_get_pos(*stack_a, 4) == 1)
-				sa(stack_a, OK);
-			else
-				ra(stack_a, OK);
-		}
-		else
-			rra(stack_a, OK);
-	}
+		sort_five(stack_a, stack_b, size_a, size_b);
 	while (*size_a == 4)
-	{
-		if (((*size_a) - 1) == (*stack_a)->id)
-			pb(stack_a, stack_b, size_a, size_b);
-		else if (stack_get_pos(*stack_a, 3) <= 1)
-		{
-			if ((*stack_a)->id <= 1 && stack_get_pos(*stack_a, 3) == 1)
-				sa(stack_a, OK);
-			else
-				ra(stack_a, OK);
-		}
-		else
-			rra(stack_a, OK);
-	}
+		sort_four(stack_a, stack_b, size_a, size_b);
 	if ((*size_a) == 3)
 		sort_three(stack_a);
 	else if ((*size_a) == 2)
