@@ -6,7 +6,7 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 12:43:12 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/29 19:02:49 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/30 11:55:22 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,15 +41,10 @@ void		free_array(char **content);
 int			look_to_duplicate_nmb(t_stack *stack);
 void		free_list(t_stack **list);
 
-//provisional
-char		*ft_memcmp_v2(const void *s1, const void *s2, size_t n);
+//utils
 t_stack		**index_list(t_stack **stack_a);
 size_t		ft_lstsize_v2(t_stack *lst);
-int			pointer_size(char **nums);
 int			min_nbr(t_stack *stack_a, long int prev_min);
-
-//print_indexes_proof
-void		print_stack_with_indices(t_stack *stack_a);
 
 //movements
 void		pa(t_stack **stack_a, t_stack **stack_b, \

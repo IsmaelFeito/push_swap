@@ -6,30 +6,11 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 13:01:13 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/29 19:09:57 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/09/30 11:56:37 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-char	*ft_memcmp_v2(const void *s1, const void *s2, size_t n)
-{
-	size_t	i;
-	char	*u1;
-	char	*u2;
-
-	(void)n;
-	u1 = (char *)s1;
-	u2 = (char *)s2;
-	i = 0;
-	while (u2)
-	{
-		if (u1[0] > u2[i])
-			return (&(u2[i]));
-		i++;
-	}
-	return (NULL);
-}
 
 void	free_list(t_stack **list)
 {
@@ -51,16 +32,4 @@ void	free_array(char **content)
 	while (content[i])
 		freedom((void **)&content[i++]);
 	freedom((void **)&content);
-}
-
-int	pointer_size(char **arr)
-{
-	int	size;
-
-	if (!arr)
-		return (0);
-	size = 0;
-	while (arr[size])
-		size++;
-	return (size);
 }
