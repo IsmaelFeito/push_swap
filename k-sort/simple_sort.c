@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   simple_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aarcos <aarcos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 05:29:47 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/30 13:14:33 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/10/01 13:48:31 by aarcos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,9 @@ static void	sort_three(t_stack **stack_a)
 		}
 	}
 }
-static void sort_four(t_stack **stack_a, t_stack **stack_b, size_t *size_a, size_t *size_b)
+
+static void	sort_four(t_stack **stack_a, t_stack **stack_b, \
+											size_t *size_a, size_t *size_b)
 {
 	if (((*size_a) - 1) == (*stack_a)->id)
 		pb(stack_a, stack_b, size_a, size_b);
@@ -51,7 +53,8 @@ static void sort_four(t_stack **stack_a, t_stack **stack_b, size_t *size_a, size
 		rra(stack_a, OK);
 }
 
-static void sort_five(t_stack **stack_a, t_stack **stack_b, size_t *size_a, size_t *size_b)
+static void	sort_five(t_stack **stack_a, t_stack **stack_b, \
+											size_t *size_a, size_t *size_b)
 {
 	if (((*size_a) - 1) == (*stack_a)->id)
 		pb(stack_a, stack_b, size_a, size_b);
@@ -65,6 +68,7 @@ static void sort_five(t_stack **stack_a, t_stack **stack_b, size_t *size_a, size
 	else
 		rra(stack_a, OK);
 }
+
 void	simple_sort(t_stack **stack_a, t_stack **stack_b, \
 											size_t *size_a, size_t *size_b)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   index_list.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aarcos <aarcos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 11:54:27 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/30 12:40:15 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/10/01 13:46:23 by aarcos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ long *min_value, t_stack **temp)
 		current = current->next;
 	}
 }
+
 t_stack	*find_n_update_min(t_stack **stack_a, size_t prev_min)
 {
 	t_stack	*current;
@@ -38,11 +39,11 @@ t_stack	*find_n_update_min(t_stack **stack_a, size_t prev_min)
 	{
 		if ((current->num > (long int)prev_min) && \
 								(current->num) == (long int)min_value)
-			{
+		{
 			min_value = current->num;
 			temp = current;
-			}
-			current = current->next;
+		}
+		current = current->next;
 	}
 	return (temp);
 }

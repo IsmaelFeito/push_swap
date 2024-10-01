@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aarcos <aarcos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 12:43:12 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/30 12:40:02 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/10/01 13:47:46 by aarcos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void		free_list(t_stack **list);
 
 //utils
 t_stack		**index_list(t_stack **stack_a);
-t_stack	*find_n_update_min(t_stack **stack_a, size_t prev_min);
+t_stack		*find_n_update_min(t_stack **stack_a, size_t prev_min);
 size_t		ft_lstsize_v2(t_stack *lst);
 int			min_nbr(t_stack *stack_a, long int prev_min);
 
