@@ -6,12 +6,12 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 19:36:54 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/22 13:15:53 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/10/04 15:47:47 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

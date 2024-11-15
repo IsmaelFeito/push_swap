@@ -6,11 +6,11 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 14:32:43 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/04/05 15:07:54 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/10/04 15:47:47 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_put_char(char c, int fd)
 {

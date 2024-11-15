@@ -6,12 +6,12 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 11:13:00 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/04/04 13:06:31 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/10/04 15:47:47 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

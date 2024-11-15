@@ -6,11 +6,11 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 17:46:22 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/28 12:27:50 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/10/04 15:47:47 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static int	ft_count_argc(char const *s, char c)
 {

@@ -6,11 +6,11 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 12:21:50 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/09/27 15:45:15 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/10/04 15:47:47 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 t_list	*ft_lstnew(void *content)
 {

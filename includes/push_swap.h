@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aarcos <aarcos@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 12:43:12 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/10/01 13:47:46 by aarcos           ###   ########.fr       */
+/*   Updated: 2024/11/15 15:53:40 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "../libft/libft.h"
+# include "libft.h"
 # include <unistd.h>
 # include <stdio.h>
 # include <stddef.h>

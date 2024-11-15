@@ -6,12 +6,12 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 12:06:01 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/04/04 13:07:01 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/10/04 15:47:47 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

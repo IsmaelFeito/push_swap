@@ -6,12 +6,12 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 16:28:24 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/04/04 13:05:02 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/10/04 15:47:47 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needdle, size_t len)
 {

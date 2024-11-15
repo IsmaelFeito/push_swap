@@ -6,12 +6,12 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 19:14:26 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/04/04 13:05:53 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/10/04 15:51:56 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

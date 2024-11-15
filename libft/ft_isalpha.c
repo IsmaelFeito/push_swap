@@ -6,13 +6,13 @@
 /*   By: ifeito-m <ifeito-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 12:43:07 by ifeito-m          #+#    #+#             */
-/*   Updated: 2024/03/15 16:12:49 by ifeito-m         ###   ########.fr       */
+/*   Updated: 2024/10/04 15:47:47 by ifeito-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_isalpha(int c)
 {
